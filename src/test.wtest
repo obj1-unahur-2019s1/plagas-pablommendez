@@ -1,0 +1,19 @@
+import Hogar.* 
+import Huerta.*
+import Mascota.*
+
+test "hogar bueno?" {
+
+	assert.equals(true,
+		new Hogar(nivelMugre = 5, confort = 10).esBueno())
+}
+
+test "huerta" {
+	assert.notThat(new Huerta(capacidadProduccion = 10).esBueno())
+}
+
+test "mascota"{
+	assert.that(new Mascota(nivelSalud = 260).esBueno()
+	)
+}
+
